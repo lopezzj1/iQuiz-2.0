@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A500FA9C1BF95E1C00D30156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A500FA9A1BF95E1C00D30156 /* Main.storyboard */; };
 		A51E8B471BF3E91A002B8CC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E8B461BF3E91A002B8CC0 /* AppDelegate.swift */; };
 		A51E8B491BF3E91A002B8CC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E8B481BF3E91A002B8CC0 /* ViewController.swift */; };
-		A51E8B4C1BF3E91A002B8CC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51E8B4A1BF3E91A002B8CC0 /* Main.storyboard */; };
 		A51E8B4E1BF3E91A002B8CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51E8B4D1BF3E91A002B8CC0 /* Assets.xcassets */; };
 		A51E8B511BF3E91A002B8CC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51E8B4F1BF3E91A002B8CC0 /* LaunchScreen.storyboard */; };
 		A51E8B5C1BF3E91A002B8CC0 /* iQuiz2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E8B5B1BF3E91A002B8CC0 /* iQuiz2Tests.swift */; };
 		A51E8B671BF3E91A002B8CC0 /* iQuiz2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E8B661BF3E91A002B8CC0 /* iQuiz2UITests.swift */; };
+		A5AACFC31BF57964008FD9C3 /* calc.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AACFC01BF57964008FD9C3 /* calc.png */; };
+		A5AACFC41BF57964008FD9C3 /* science.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AACFC11BF57964008FD9C3 /* science.png */; };
+		A5AACFC51BF57964008FD9C3 /* superhero.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AACFC21BF57964008FD9C3 /* superhero.png */; };
+		A5AACFC71BF583F8008FD9C3 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AACFC61BF583F8008FD9C3 /* GameController.swift */; };
+		A5AACFC91BF70620008FD9C3 /* AnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AACFC81BF70620008FD9C3 /* AnswerController.swift */; };
+		A5AACFCB1BF71199008FD9C3 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AACFCA1BF71199008FD9C3 /* Background.png */; };
+		A5AACFD51BF7FEED008FD9C3 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AACFD41BF7FEED008FD9C3 /* FinalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A500FA9B1BF95E1C00D30156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A51E8B431BF3E91A002B8CC0 /* iQuiz2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51E8B461BF3E91A002B8CC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51E8B481BF3E91A002B8CC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A51E8B4B1BF3E91A002B8CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A51E8B4D1BF3E91A002B8CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A51E8B501BF3E91A002B8CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A51E8B521BF3E91A002B8CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +54,13 @@
 		A51E8B621BF3E91A002B8CC0 /* iQuiz2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iQuiz2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51E8B661BF3E91A002B8CC0 /* iQuiz2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuiz2UITests.swift; sourceTree = "<group>"; };
 		A51E8B681BF3E91A002B8CC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5AACFC01BF57964008FD9C3 /* calc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calc.png; sourceTree = "<group>"; };
+		A5AACFC11BF57964008FD9C3 /* science.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = science.png; sourceTree = "<group>"; };
+		A5AACFC21BF57964008FD9C3 /* superhero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = superhero.png; sourceTree = "<group>"; };
+		A5AACFC61BF583F8008FD9C3 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		A5AACFC81BF70620008FD9C3 /* AnswerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerController.swift; sourceTree = "<group>"; };
+		A5AACFCA1BF71199008FD9C3 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		A5AACFD41BF7FEED008FD9C3 /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalViewController.swift; path = ../FinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +113,17 @@
 			children = (
 				A51E8B461BF3E91A002B8CC0 /* AppDelegate.swift */,
 				A51E8B481BF3E91A002B8CC0 /* ViewController.swift */,
-				A51E8B4A1BF3E91A002B8CC0 /* Main.storyboard */,
+				A5AACFC61BF583F8008FD9C3 /* GameController.swift */,
+				A5AACFC81BF70620008FD9C3 /* AnswerController.swift */,
+				A5AACFD41BF7FEED008FD9C3 /* FinalViewController.swift */,
 				A51E8B4D1BF3E91A002B8CC0 /* Assets.xcassets */,
+				A500FA9A1BF95E1C00D30156 /* Main.storyboard */,
 				A51E8B4F1BF3E91A002B8CC0 /* LaunchScreen.storyboard */,
+				A5AACFCA1BF71199008FD9C3 /* Background.png */,
 				A51E8B521BF3E91A002B8CC0 /* Info.plist */,
+				A5AACFC01BF57964008FD9C3 /* calc.png */,
+				A5AACFC11BF57964008FD9C3 /* science.png */,
+				A5AACFC21BF57964008FD9C3 /* superhero.png */,
 			);
 			path = iQuiz2;
 			sourceTree = "<group>";
@@ -233,8 +254,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A51E8B511BF3E91A002B8CC0 /* LaunchScreen.storyboard in Resources */,
+				A5AACFC51BF57964008FD9C3 /* superhero.png in Resources */,
+				A5AACFC41BF57964008FD9C3 /* science.png in Resources */,
+				A5AACFCB1BF71199008FD9C3 /* Background.png in Resources */,
 				A51E8B4E1BF3E91A002B8CC0 /* Assets.xcassets in Resources */,
-				A51E8B4C1BF3E91A002B8CC0 /* Main.storyboard in Resources */,
+				A500FA9C1BF95E1C00D30156 /* Main.storyboard in Resources */,
+				A5AACFC31BF57964008FD9C3 /* calc.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5AACFD51BF7FEED008FD9C3 /* FinalViewController.swift in Sources */,
 				A51E8B491BF3E91A002B8CC0 /* ViewController.swift in Sources */,
+				A5AACFC91BF70620008FD9C3 /* AnswerController.swift in Sources */,
+				A5AACFC71BF583F8008FD9C3 /* GameController.swift in Sources */,
 				A51E8B471BF3E91A002B8CC0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,10 +324,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A51E8B4A1BF3E91A002B8CC0 /* Main.storyboard */ = {
+		A500FA9A1BF95E1C00D30156 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A51E8B4B1BF3E91A002B8CC0 /* Base */,
+				A500FA9B1BF95E1C00D30156 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -485,6 +513,7 @@
 				A51E8B6D1BF3E91A002B8CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A51E8B6E1BF3E91A002B8CC0 /* Build configuration list for PBXNativeTarget "iQuiz2Tests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +522,7 @@
 				A51E8B701BF3E91A002B8CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A51E8B711BF3E91A002B8CC0 /* Build configuration list for PBXNativeTarget "iQuiz2UITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +531,7 @@
 				A51E8B731BF3E91A002B8CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -78,7 +78,7 @@ class AnswerController: UIViewController {
         } else if questionsLeft == 0  {
             if let finalController = segue.destinationViewController as? FinalViewController {
                 finalController.itWorked = "Yes from final controller"
-                finalController.numberOfQuestions = 20
+                finalController.numberOfQuestions = 10
                 finalController.finalScore = score
             }
         }

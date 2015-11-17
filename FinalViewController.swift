@@ -24,13 +24,15 @@ class FinalViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        scoreLabel.text = "\(finalScore)/\(numberOfQuestions)"
+        scoreLabel.text = "\(finalScore) / \(numberOfQuestions)"
         
-        let quizScore = Double(finalScore/numberOfQuestions) * 100.0
+        
+        let quizScore = (Double(finalScore) / Double(numberOfQuestions)) * 100.0
+        print(quizScore)
         
         if quizScore == 100.0 {
             messageLabel.text = "Wow! Perfect Score! 💯"
-        } else if quizScore >= 75.0 {
+        } else if quizScore == 75.0 {
             messageLabel.text = "Close enough..."
         } else if quizScore > 50.0 {
             messageLabel.text = "Try again...😐"

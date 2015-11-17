@@ -23,9 +23,9 @@ class GameController: UIViewController {
     var correctAnswer = "" //string of correct answer of the question
     var answerChosen = ""   //string of answer the user selected
     var totalScore = 0  //current answer
-    var questionsLeft = 20   //number of questions left
+    var questionsLeft = 10   //number of questions left
     var currentQuestion = ""    //current question of quiz
-    var numOfQuestions = 20     //number of questions total
+    var numOfQuestions = 10     //number of questions total
     var buttonSelected = false  //boolean to check if a button answer has been selected
     
     var itWorked = ""

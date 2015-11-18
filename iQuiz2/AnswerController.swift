@@ -44,8 +44,8 @@ class AnswerController: UIViewController {
         questionLabel.text = ("Q: \(currentQuestion)")
         answerLabel.text = ("A: \(answer)")
         currentScore.text = "Your current score is: \(score)/\(numOfQuestions)"
-        print ("from answercontroller \(questionsLeft)")
-        print("score: \(score)")
+        //print ("from answercontroller \(questionsLeft)")
+        //print("score: \(score)")
 
     }
     
@@ -60,16 +60,11 @@ class AnswerController: UIViewController {
     }
     
     
-   /* //gets the cell that was selected
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("GameSegue", sender: nil)
-    }*/
-    
+
     //prepares for segue (Main)
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if questionsLeft > 0 {
             if let gameController = segue.destinationViewController as? GameController {
-                gameController.itWorked = "Yes from game controller"
                 gameController.currentQuiz = currentQuiz
                 gameController.selectedQuiz = selectedQuiz
                 gameController.questionsLeft = questionsLeft
@@ -77,15 +72,12 @@ class AnswerController: UIViewController {
             }
         } else if questionsLeft == 0  {
             if let finalController = segue.destinationViewController as? FinalViewController {
-                finalController.itWorked = "Yes from final controller"
+                
                 finalController.numberOfQuestions = 10
                 finalController.finalScore = score
             }
         }
-        
-       /* if let finalController = segue.destinationViewController as? FinalViewController {
-            finalController.itWorked = "Yes from final controller"
-        }*/
+
     }
 
 

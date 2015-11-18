@@ -10,8 +10,6 @@ import UIKit
 
 class FinalViewController: UIViewController {
 
-    var itWorked = ""
-    
     
     @IBOutlet weak var scoreLabel: UILabel!
     var finalScore = 0
@@ -28,19 +26,19 @@ class FinalViewController: UIViewController {
         
         
         let quizScore = (Double(finalScore) / Double(numberOfQuestions)) * 100.0
+        
         print(quizScore)
         
         if quizScore == 100.0 {
             messageLabel.text = "Wow! Perfect Score! 💯"
-        } else if quizScore == 75.0 {
-            messageLabel.text = "Close enough..."
+        } else if quizScore >= 75.0 {
+            messageLabel.text = "Close enough...👍🏽"
         } else if quizScore > 50.0 {
             messageLabel.text = "Try again...😐"
         } else if quizScore <= 50.0 {
             messageLabel.text = "Maybe you should go study..."
         }
         
-        print(itWorked)
         
         // Do view setup here.
     }

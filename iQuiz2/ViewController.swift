@@ -31,14 +31,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        super.title = "iQuiz"
         
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        super.title = "iQuiz"
         // Dispose of any resources that can be recreated.
     }
     

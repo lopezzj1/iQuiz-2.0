@@ -17,8 +17,8 @@ struct Question {
 
 class GameController: UIViewController {
     
-    var selectedQuiz = ""   //string of the quiz title selected
     var currentQuiz : [Question] = []   //stores the quiz struct
+    var selectedQuiz = ""   //string of the quiz title selected
     var answers : [String] = [] //stores the answers of the question in an array
     var correctAnswer = "" //string of correct answer of the question
     var answerChosen = ""   //string of answer the user selected
@@ -28,7 +28,6 @@ class GameController: UIViewController {
     var numOfQuestions = 10     //number of questions total
     var buttonSelected = false  //boolean to check if a button answer has been selected
     
-    var itWorked = ""
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerOneButton: UIButton!
@@ -98,7 +97,6 @@ class GameController: UIViewController {
     @IBAction func oneSelected(sender: AnyObject) {
         if answerOneButton.titleLabel?.text == correctAnswer {
             totalScore++
-            print("correct!")
         }
         
         if buttonSelected == true {
@@ -110,15 +108,10 @@ class GameController: UIViewController {
         answerChosen = (answerOneButton.titleLabel?.text)!
         answerOneButton.selected = true
         buttonSelected = true;
-        
-        
 
         submitButton.enabled = true
-        /*
-        answerOneButton.layer.borderWidth = 3;
-        answerOneButton.layer.borderColor = UIColor(red: 36/255, green: 124/255, blue: 255/255, alpha: 1.0).CGColor
-        */
         submitButton.layer.backgroundColor = UIColor(red: 246/255, green: 111/255, blue: 60/255, alpha: 1.0).CGColor
+        
         questionsLeft--
     }
     
@@ -126,7 +119,6 @@ class GameController: UIViewController {
     @IBAction func twoSelected(sender: AnyObject) {
         if answerTwoButton.titleLabel?.text == correctAnswer {
             totalScore++
-            print("correct!")
         }
         
         if buttonSelected == true {
@@ -135,18 +127,13 @@ class GameController: UIViewController {
             answerFourButton.selected = false
         }
         
-        
         answerChosen = (answerTwoButton.titleLabel?.text)!
         answerTwoButton.selected = true
         buttonSelected = true;
         
         submitButton.enabled = true;
-        
-        /*answerTwoButton.layer.borderWidth = 3;
-        answerTwoButton.layer.borderColor = UIColor(red: 36/255, green: 124/255, blue: 255/255, alpha: 1.0).CGColor
-        */
-
         submitButton.layer.backgroundColor = UIColor(red: 246/255, green: 111/255, blue: 60/255, alpha: 1.0).CGColor
+        
         questionsLeft--
         
     }
@@ -155,7 +142,6 @@ class GameController: UIViewController {
     @IBAction func threeSelected(sender: AnyObject) {
         if answerThreeButton.titleLabel?.text == correctAnswer {
             totalScore++
-            print("correct!")
         }
         
         if buttonSelected == true {
@@ -169,21 +155,14 @@ class GameController: UIViewController {
         buttonSelected = true
 
         submitButton.enabled = true;
-        
-        
-        /*answerThreeButton.layer.borderWidth = 3;
-        answerThreeButton.layer.borderColor = UIColor(red: 36/255, green: 124/255, blue: 255/255, alpha: 1.0).CGColor
-        */
-        
         submitButton.layer.backgroundColor = UIColor(red: 246/255, green: 111/255, blue: 60/255, alpha: 1.0).CGColor
+        
         questionsLeft--
     }
     
     @IBAction func fourSelected(sender: AnyObject) {
         if answerFourButton.titleLabel?.text == correctAnswer {
-            
             totalScore++
-            print("correct!")
         }
         
         if buttonSelected == true {
@@ -196,20 +175,15 @@ class GameController: UIViewController {
         answerFourButton.selected = true
         buttonSelected = true
         
-        submitButton.enabled = true;
-        /*
-        answerFourButton.layer.borderWidth = 3;
-        answerFourButton.layer.borderColor = UIColor(red: 36/255, green: 124/255, blue: 255/255, alpha: 1.0).CGColor
-        */
+        submitButton.enabled = true
         submitButton.layer.backgroundColor = UIColor(red: 246/255, green: 111/255, blue: 60/255, alpha: 1.0).CGColor
+        
         questionsLeft--
     }
     
     
     //gets the cell that was selected
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //let cell = tableView.cellForRowAtIndexPath(indexPath)
-        //self.selectedTitle = (cell?.textLabel?.text)!
         self.performSegueWithIdentifier("AnswerSegue", sender: nil)
     }
     
@@ -231,7 +205,6 @@ class GameController: UIViewController {
             answerController.currentQuiz = currentQuiz
             answerController.selectedQuiz = selectedQuiz
             answerController.score = totalScore
-            
             
         }
         

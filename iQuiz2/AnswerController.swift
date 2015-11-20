@@ -28,6 +28,9 @@ class AnswerController: UIViewController {
     
     var questionsLeft = 0
     
+    var questionsAnswered = 0
+    
+    
     var currentQuiz : [Question] = []
     
     var selectedQuiz = ""
@@ -35,6 +38,8 @@ class AnswerController: UIViewController {
     @IBOutlet weak var next: UIButton!
     
     var displayAnswer = ""
+    
+    var currentCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,11 +74,14 @@ class AnswerController: UIViewController {
                 gameController.selectedQuiz = selectedQuiz
                 gameController.questionsLeft = questionsLeft
                 gameController.totalScore = score
+                currentCount++
+                gameController.currentCount = currentCount
+                gameController.questionsAnswered = questionsAnswered
             }
         } else if questionsLeft == 0  {
             if let finalController = segue.destinationViewController as? FinalViewController {
                 
-                finalController.numberOfQuestions = 10
+                finalController.numberOfQuestions = numOfQuestions
                 finalController.finalScore = score
             }
         }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A500FA9C1BF95E1C00D30156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A500FA9A1BF95E1C00D30156 /* Main.storyboard */; };
+		A51E4CED1BFEADF7008281A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E4CEC1BFEADF7008281A5 /* SettingsViewController.swift */; };
 		A51E8B471BF3E91A002B8CC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E8B461BF3E91A002B8CC0 /* AppDelegate.swift */; };
 		A51E8B491BF3E91A002B8CC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E8B481BF3E91A002B8CC0 /* ViewController.swift */; };
 		A51E8B4E1BF3E91A002B8CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51E8B4D1BF3E91A002B8CC0 /* Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		A5AACFC51BF57964008FD9C3 /* superhero.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AACFC21BF57964008FD9C3 /* superhero.png */; };
 		A5AACFC71BF583F8008FD9C3 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AACFC61BF583F8008FD9C3 /* GameController.swift */; };
 		A5AACFC91BF70620008FD9C3 /* AnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AACFC81BF70620008FD9C3 /* AnswerController.swift */; };
-		A5AACFCB1BF71199008FD9C3 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AACFCA1BF71199008FD9C3 /* Background.png */; };
 		A5AACFD51BF7FEED008FD9C3 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AACFD41BF7FEED008FD9C3 /* FinalViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		A500FA9B1BF95E1C00D30156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A51E4CEC1BFEADF7008281A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A51E8B431BF3E91A002B8CC0 /* iQuiz2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51E8B461BF3E91A002B8CC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51E8B481BF3E91A002B8CC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		A5AACFC21BF57964008FD9C3 /* superhero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = superhero.png; sourceTree = "<group>"; };
 		A5AACFC61BF583F8008FD9C3 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		A5AACFC81BF70620008FD9C3 /* AnswerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerController.swift; sourceTree = "<group>"; };
-		A5AACFCA1BF71199008FD9C3 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		A5AACFD41BF7FEED008FD9C3 /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalViewController.swift; path = ../FinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,11 +115,11 @@
 				A51E8B481BF3E91A002B8CC0 /* ViewController.swift */,
 				A5AACFC61BF583F8008FD9C3 /* GameController.swift */,
 				A5AACFC81BF70620008FD9C3 /* AnswerController.swift */,
+				A51E4CEC1BFEADF7008281A5 /* SettingsViewController.swift */,
 				A5AACFD41BF7FEED008FD9C3 /* FinalViewController.swift */,
 				A51E8B4D1BF3E91A002B8CC0 /* Assets.xcassets */,
 				A500FA9A1BF95E1C00D30156 /* Main.storyboard */,
 				A51E8B4F1BF3E91A002B8CC0 /* LaunchScreen.storyboard */,
-				A5AACFCA1BF71199008FD9C3 /* Background.png */,
 				A51E8B521BF3E91A002B8CC0 /* Info.plist */,
 				A5AACFC01BF57964008FD9C3 /* calc.png */,
 				A5AACFC11BF57964008FD9C3 /* science.png */,
@@ -256,7 +256,6 @@
 				A51E8B511BF3E91A002B8CC0 /* LaunchScreen.storyboard in Resources */,
 				A5AACFC51BF57964008FD9C3 /* superhero.png in Resources */,
 				A5AACFC41BF57964008FD9C3 /* science.png in Resources */,
-				A5AACFCB1BF71199008FD9C3 /* Background.png in Resources */,
 				A51E8B4E1BF3E91A002B8CC0 /* Assets.xcassets in Resources */,
 				A500FA9C1BF95E1C00D30156 /* Main.storyboard in Resources */,
 				A5AACFC31BF57964008FD9C3 /* calc.png in Resources */,
@@ -289,6 +288,7 @@
 				A5AACFC91BF70620008FD9C3 /* AnswerController.swift in Sources */,
 				A5AACFC71BF583F8008FD9C3 /* GameController.swift in Sources */,
 				A51E8B471BF3E91A002B8CC0 /* AppDelegate.swift in Sources */,
+				A51E4CED1BFEADF7008281A5 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

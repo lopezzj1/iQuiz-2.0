@@ -9,11 +9,11 @@
 //import Cocoa
 import UIKit
 
-struct Question {
+/*struct Question {
     var question : String
     var answers : [String]
     var correctAnswer : String
-}
+}*/
 
 class GameController: UIViewController {
     
@@ -23,10 +23,13 @@ class GameController: UIViewController {
     var correctAnswer = "" //string of correct answer of the question
     var answerChosen = ""   //string of answer the user selected
     var totalScore = 0  //current answer
-    var questionsLeft = 10   //number of questions left
+    var questionsAnswered = 0
+    var questionsLeft = 0   //number of questions left
     var currentQuestion = ""    //current question of quiz
-    var numOfQuestions = 10     //number of questions total
+    var currentCount = 0
+    var numOfQuestions = 0     //number of questions total
     var buttonSelected = false  //boolean to check if a button answer has been selected
+    //var newQuiz : []
     
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -35,61 +38,44 @@ class GameController: UIViewController {
     @IBOutlet weak var answerThreeButton: UIButton!
     @IBOutlet weak var answerFourButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
+
     
-    var mathQuiz = [Question(question: "What is 4 * 5?", answers: ["a. 0", "b. 10", "c. 20", "d. 25"], correctAnswer: "c. 20")]
-    
-    var marvelQuiz = [Question(question: "Who is Iron Man?", answers: ["a. Steve Rogers", "b. Bruce Hammer", "c. Thor", "d. Tony Stark"], correctAnswer: "d. Tony Stark")]
-    
-    var scienceQuiz = [Question(question: "What is evaporation?", answers: ["a. Liquid to vapor", "b. Water vapor to liquid", "c. Solid to liquid", "d. None of the above"], correctAnswer: "a. Liquid to vapor")]
-    
-    
+
     override func viewDidLoad(){
         super.viewDidLoad()
         
         self.title = selectedQuiz
-        
-        
-        if selectedQuiz == "Mathematics" {
-            currentQuiz = mathQuiz
-            answers = mathQuiz[0].answers
-            
-            questionLabel.text = currentQuiz[0].question
-            correctAnswer = currentQuiz[0].correctAnswer
-            currentQuestion = currentQuiz[0].question
-            
-            answerOneButton.setTitle(answers[0], forState: .Normal)
-            answerTwoButton.setTitle(answers[1], forState: .Normal)
-            answerThreeButton.setTitle(answers[2], forState: .Normal)
-            answerFourButton.setTitle(answers[3], forState: .Normal)
 
-        } else if selectedQuiz == "Marvel Super Heroes" {
-            currentQuiz = marvelQuiz
-            answers = marvelQuiz[0].answers
-            
-            questionLabel.text = currentQuiz[0].question
-            correctAnswer = currentQuiz[0].correctAnswer
-            currentQuestion = currentQuiz[0].question
-            
-            answerOneButton.setTitle(answers[0], forState: .Normal)
-            answerTwoButton.setTitle(answers[1], forState: .Normal)
-            answerThreeButton.setTitle(answers[2], forState: .Normal)
-            answerFourButton.setTitle(answers[3], forState: .Normal)
-            
-        } else if selectedQuiz == "Science" {
-            currentQuiz = scienceQuiz
-            answers = scienceQuiz[0].answers
-            
-            questionLabel.text = currentQuiz[0].question
-            correctAnswer = currentQuiz[0].correctAnswer
-            currentQuestion = currentQuiz[0].question
-            
-            answerOneButton.setTitle(answers[0], forState: .Normal)
-            answerTwoButton.setTitle(answers[1], forState: .Normal)
-            answerThreeButton.setTitle(answers[2], forState: .Normal)
-            answerFourButton.setTitle(answers[3], forState: .Normal)
-            
+        numOfQuestions = currentQuiz.count //stores the number of questions in the quiz
+        questionsLeft = numOfQuestions
+        currentQuestion = currentQuiz[currentCount].question
+        
+        //set question label to current question
+        questionLabel.text = currentQuestion
+
+        
+        //store answers
+        answers = currentQuiz[currentCount].answers
+        
+        //set answer buttons
+        answerOneButton.setTitle(answers[0], forState: .Normal)
+        answerTwoButton.setTitle(answers[1], forState: .Normal)
+        answerThreeButton.setTitle(answers[2], forState: .Normal)
+        answerFourButton.setTitle(answers[3], forState: .Normal)
+        
+        //set correct answer
+        let answerNumber = (currentQuiz[currentCount].correctAnswer) as String
+        if answerNumber == "1" {
+            correctAnswer = answers[0]
+        } else if answerNumber == "2" {
+            correctAnswer = answers[1]
+        } else if answerNumber == "3" {
+            correctAnswer = answers[2]
+        } else if answerNumber == "4" {
+            correctAnswer = answers[3]
         }
         
+        //additional UI settings
         submitButton.enabled = false
         submitButton.layer.backgroundColor = UIColor.grayColor().CGColor
     }
@@ -111,8 +97,7 @@ class GameController: UIViewController {
 
         submitButton.enabled = true
         submitButton.layer.backgroundColor = UIColor(red: 246/255, green: 111/255, blue: 60/255, alpha: 1.0).CGColor
-        
-        questionsLeft--
+
     }
     
 
@@ -134,8 +119,6 @@ class GameController: UIViewController {
         submitButton.enabled = true;
         submitButton.layer.backgroundColor = UIColor(red: 246/255, green: 111/255, blue: 60/255, alpha: 1.0).CGColor
         
-        questionsLeft--
-        
     }
     
     
@@ -156,8 +139,7 @@ class GameController: UIViewController {
 
         submitButton.enabled = true;
         submitButton.layer.backgroundColor = UIColor(red: 246/255, green: 111/255, blue: 60/255, alpha: 1.0).CGColor
-        
-        questionsLeft--
+
     }
     
     @IBAction func fourSelected(sender: AnyObject) {
@@ -177,8 +159,7 @@ class GameController: UIViewController {
         
         submitButton.enabled = true
         submitButton.layer.backgroundColor = UIColor(red: 246/255, green: 111/255, blue: 60/255, alpha: 1.0).CGColor
-        
-        questionsLeft--
+
     }
     
     
@@ -189,6 +170,8 @@ class GameController: UIViewController {
     
     //prepares for segue (Main)
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        questionsAnswered++
+        questionsLeft -= questionsAnswered
         if let answerController = segue.destinationViewController as? AnswerController
         {
             if answerChosen == correctAnswer {
@@ -205,6 +188,9 @@ class GameController: UIViewController {
             answerController.currentQuiz = currentQuiz
             answerController.selectedQuiz = selectedQuiz
             answerController.score = totalScore
+            answerController.currentCount = currentCount
+            answerController.questionsLeft = questionsLeft
+            answerController.questionsAnswered = questionsAnswered
             
         }
         

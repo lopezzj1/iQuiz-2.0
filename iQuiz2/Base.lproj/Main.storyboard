@@ -18,7 +18,7 @@
                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cells" textLabel="Lec-nA-3Zc" detailTextLabel="nRq-I2-F4F" style="IBUITableViewCellStyleSubtitle" id="QoB-nH-rxT">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QoB-nH-rxT" id="fqe-L4-wFF">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -60,6 +60,9 @@
                                 <state key="normal" title="Settings"/>
                                 <connections>
                                     <action selector="settingsSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dB9-bq-JmA"/>
+                                    <segue destination="ANN-fc-BK6" kind="popoverPresentation" identifier="SettingsSeguge" popoverAnchorView="rNA-Mj-pv8" id="gQa-0Q-Nan">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -87,13 +90,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPI-mv-OsI">
-                                <rect key="frame" x="11" y="45" width="299" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMw-ns-BOA">
                                 <rect key="frame" x="20" y="154" width="280" height="58"/>
                                 <animations/>
@@ -153,6 +149,13 @@
                                     <segue destination="pmt-eh-GSA" kind="show" identifier="AnswerSegue" id="P9Q-eZ-sxM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPI-mv-OsI">
+                                <rect key="frame" x="11" y="45" width="299" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1u6-Pd-QCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521" y="1303"/>
+            <point key="canvasLocation" x="1545" y="1242"/>
         </scene>
         <!--Answer Controller-->
         <scene sceneID="HGy-W2-NYx">
@@ -202,13 +205,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CurrentScore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ev-CY-lDc">
-                                <rect key="frame" x="8" y="317" width="304" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2i-Lu-Slv">
                                 <rect key="frame" x="16" y="482" width="284" height="61"/>
                                 <animations/>
@@ -224,6 +220,13 @@
                                 <rect key="frame" x="8" y="223" width="304" height="22"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CurrentScore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ev-CY-lDc">
+                                <rect key="frame" x="8" y="317" width="304" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -261,6 +264,70 @@
             </objects>
             <point key="canvasLocation" x="2006" y="1303"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="AKk-nu-YDV">
+            <objects>
+                <viewController id="ANN-fc-BK6" customClass="SettingsViewController" customModule="iQuiz2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZEq-ma-skZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nbp-ZU-bi1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JRt-qC-fqW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQR-CG-HX6">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Done" id="aMj-T5-tza">
+                                        <connections>
+                                            <segue destination="W2a-96-bmO" kind="unwind" unwindAction="goBack:" id="bUW-yE-BUN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download new questions!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFZ-po-yPg">
+                                <rect key="frame" x="58" y="184" width="205" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ac-Rn-a8J">
+                                <rect key="frame" x="20" y="213" width="280" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lL-pR-W9u">
+                                <rect key="frame" x="109" y="269" width="103" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Download Now"/>
+                                <connections>
+                                    <action selector="downloadSelected:" destination="ANN-fc-BK6" eventType="touchUpInside" id="jxu-TF-YXF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vFZ-po-yPg" secondAttribute="trailing" constant="41" id="5uB-Cj-efB"/>
+                            <constraint firstItem="vFZ-po-yPg" firstAttribute="top" secondItem="ZEq-ma-skZ" secondAttribute="bottom" constant="164" id="Apr-iD-cqF"/>
+                            <constraint firstItem="vFZ-po-yPg" firstAttribute="leading" secondItem="JRt-qC-fqW" secondAttribute="leadingMargin" constant="42" id="P0E-7R-R3u"/>
+                            <constraint firstItem="vFZ-po-yPg" firstAttribute="leading" secondItem="JRt-qC-fqW" secondAttribute="leadingMargin" constant="42" id="qkv-Gh-eOE"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="urlTextBox" destination="7ac-Rn-a8J" id="9iI-jn-khe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYR-qY-iZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="W2a-96-bmO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1982" y="247"/>
+        </scene>
         <!--Final View Controller-->
         <scene sceneID="3Rj-Rz-i8A">
             <objects>
@@ -273,13 +340,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've completed the quiz!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVD-eE-qsu">
-                                <rect key="frame" x="16" y="35" width="292" height="72"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.30113574999999998" green="0.65053452950000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PersonalMessage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDL-OP-p3L">
                                 <rect key="frame" x="16" y="211" width="288" height="61"/>
                                 <animations/>
@@ -310,6 +370,13 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="1" green="0.35689755979999999" blue="0.14198094380000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've completed the quiz!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVD-eE-qsu">
+                                <rect key="frame" x="16" y="35" width="292" height="72"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.30113574999999998" green="0.65053452950000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -363,6 +430,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="RU3-bW-fCi"/>
-        <segue reference="3Xz-Mg-FXO"/>
+        <segue reference="Rbs-Ft-VbK"/>
     </inferredMetricsTieBreakers>
 </document>
